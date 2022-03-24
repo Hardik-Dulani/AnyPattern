@@ -1,0 +1,124 @@
+def Diamond1(n):
+    for i in range(1,n+1):
+        for j in range(n,i-1,-1):
+            print(' ',end='')
+        for k in range(i):
+            print('* ',end='')
+        print()
+    print('* '*(n+1))
+    for i in range(n):
+        for k in range(i+1):
+            print(' ',end='')
+        for j in range(n,i,-1):
+            print('*',end=' ')
+        print()
+def InvHill(n):
+    for i in range(n):
+        for k in range(i):
+            print(' ',end='')
+        for j in range(n,i,-1):
+            print('*',end=' ')
+        print()
+def Num1(n):
+    a=1
+    for i in range(1,n+1):
+        for j in range(i):
+            print(a,end=' ')
+            a+=1
+        print()
+def Hill(n):
+    for i in range(1,n+1):
+        for j in range(n,i,-1):
+            print(' ',end='')
+        for k in range(i):
+            print('* ',end='')
+        print()
+def square1(n):
+    for i in range(n):
+        for j in range(n):
+            print('* ',end='')
+        print()
+def InvDecTriangle(n):
+    for i in range(n):
+        for k in range(i):
+            print(' ',end='')
+        for j in range(n,i,-1):
+            print('*',end='')
+        print()
+def InvIncTriangle(n):
+    for j in range(n,i,-1):
+        print(' ',end='')
+    for k in range(i):
+        print('*',end='')
+    print()
+def Increasing(n):
+    for i in range(n+1):
+        for j in range(i):
+            print('* ',end='')
+        print()
+def Decreasing(n):
+    for i in range(n):
+        for j in range(n,i,-1):
+            print('*',end='')
+        print()
+def Nestanypattern(p):
+    l=['Triangle','Pyramid','Diamond','Square','Numbers']
+    Tri=['Increasing','Decreasing','Increasing Inverted','Decreasing Inverted']
+    Pyr=['Upright','Inverted']
+    print('Hello',p)
+    print()
+    print('we have the following patterns')
+    print(l)
+        
+    print()
+    print()
+    a=input('Enter pattern you want to print: ')
+    print()
+    if a not in l:
+        print('Enter a valid input ')
+    else:
+        if a=='Triangle':
+            print('types of',a,'are: ') 
+            print(Tri)
+            u=input('Which type of Triangle you want? ')
+            n=int(input('Enter size: '))
+            print()
+            print()
+            if u==Tri[0]:
+                (Increasing(n))
+            elif u==Tri[1]:
+                (Decreasing(n))
+            elif u==Tri[2]:
+                (IncInvTriangle(n))
+            elif u==Tri[3]:
+                (DecInvTriangle(n))
+            else:
+                print('Enter a valid type of Triangle')
+        elif a==l[1]:
+            print('Types of Pyramid are : ')
+            print(Pyr)
+            u=input('Which type of Pyramid you want? ')
+            n=int(input('Enter size: '))
+            print()
+            print()
+            if u==Pyr[0]:
+                print(Hill(n))
+            elif u==Pyr[1]:
+                print(InvHill(n))
+            else:
+                print('Enter a valid type of Pyramid')
+        elif a==l[2]:
+            n=int(input('Enter Size : '))
+            print()
+            print()
+            print(Diamond1(n))
+        elif a==l[3]:
+            n=int(input('Enter size : '))
+            print()
+            print()
+            print(square(n))
+        elif a==l[4]:
+            n=int(input('Enter Number of rows: '))
+            print()
+            print()
+            print(Num1(n))
